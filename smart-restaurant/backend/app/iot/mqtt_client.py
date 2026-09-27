@@ -1,0 +1,1 @@
+"""MQTT connection helpers for restaurant devices will go here."""

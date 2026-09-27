@@ -1,0 +1,5 @@
+; Wokwi project configuration for the ESP32 robot sketch.
+[wokwi]
+version = 1
+firmware = 'build/restaurant_robot.ino.bin'
+elf = 'build/restaurant_robot.ino.elf'

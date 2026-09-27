@@ -1,0 +1,1 @@
+"""Restaurant table data model definitions will be added here."""

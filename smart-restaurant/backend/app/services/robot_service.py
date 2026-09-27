@@ -1,0 +1,1 @@
+"""Robot coordination logic will be implemented here."""
