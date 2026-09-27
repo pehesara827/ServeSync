@@ -1,0 +1,99 @@
+# ===========================================================================
+# Smart Restaurant - repository-wide ignore rules
+# Layout: smart-restaurant/{backend,frontend,robot,docs}
+#   backend  -> Python / FastAPI, local .venv, SQLite database, .env
+#   frontend -> React + Vite (npm)
+#   robot    -> ESP32 Arduino sketch + Wokwi project
+# ===========================================================================
+
+# ---------------------------------------------------------------------------
+# OS and editor clutter
+# ---------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+
+# ---------------------------------------------------------------------------
+# Secrets and local configuration
+# ---------------------------------------------------------------------------
+# backend/.env holds local APP_ENV / DATABASE_URL values; commit only a
+# .env.example template instead.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Python / FastAPI backend
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Test / lint / type-check caches and coverage output
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# SQLite database created from DATABASE_URL (sqlite:///./restaurant.db)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------------------
+# Node / Vite frontend
+# ---------------------------------------------------------------------------
+node_modules/
+# Vite build output (smart-restaurant/frontend/dist)
+dist/
+.vite/
+*.local
+
+# Package manager logs and caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.npm/
+.yarn/
+.pnp.*
+
+# ---------------------------------------------------------------------------
+# ESP32 robot firmware (Arduino / PlatformIO / Wokwi)
+# ---------------------------------------------------------------------------
+# robot/wokwi/wokwi.toml compiles the sketch into robot/wokwi/build/
+robot/**/build/
+build/
+.pio/
+.pioenvs/
+.piolibdeps/
+*.bin
+*.elf
+*.hex
+*.map
