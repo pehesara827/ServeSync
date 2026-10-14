@@ -1,4 +1,12 @@
 // Shows the initial customer-facing screen.
+import Navbar from './components/Navbar.jsx';
+import KitchenDashboard from './pages/Kitchen/KitchenDashboard.jsx';
+
 export default function App() {
-  return <main><h1>Smart Restaurant</h1><p>Restaurant tools are ready to build.</p></main>;
+  return (
+    <>
+      <Navbar />
+      <KitchenDashboard />
+    </>
+  );
 }
